@@ -10,57 +10,22 @@ The dataset used in this analysis is sourced from [Kaggle](https://www.kaggle.co
 The project addresses the following key business questions:
 
 1. What is the overall hotel revenue for the given period?
+
 ![Solution 1](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/1.png)
 
 2. How does the overall revenue vary between the two hotels?
+ 
 ![Solution 2](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/2.png)
 
 3. How does the overall revenue vary for the given period between the two hotels?
+
 ![Solution 3](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/3.png)
 
 4. What is the cancellation rate, and does it vary based on factors like hotel type, customer type, or booking lead time?
-```
-WITH hotels AS (
-SELECT * FROM hotel_2018
-UNION ALL
-SELECT * FROM hotel_2019
-UNION ALL
-SELECT * FROM hotel_2020
-)
 
-SELECT arrival_date_year AS year,
-SUM(CASE 
-	WHEN is_canceled = 1 THEN 1 
-	ELSE 0 
-	END) AS canceled_bookings,
-COUNT(*) AS total_bookings,
-CAST(SUM(CASE WHEN is_canceled = 1 THEN 1 ELSE 0 END) AS FLOAT) / COUNT(*) AS cancellation_rate
-FROM hotels
-GROUP BY arrival_date_year
-ORDER BY cancellation_rate DESC;
-```
-[](link)
-```
-WITH hotels AS (
-SELECT * FROM hotel_2018
-UNION ALL
-SELECT * FROM hotel_2019
-UNION ALL
-SELECT * FROM hotel_2020
-)
+![Solution 4- Year](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/4.1.png))
 
-SELECT hotel,
-SUM(CASE 
-	WHEN is_canceled = 1 THEN 1 
-	ELSE 0 
-	END) AS canceled_bookings,
-COUNT(*) AS total_bookings,
-CAST(SUM(CASE WHEN is_canceled = 1 THEN 1 ELSE 0 END) AS FLOAT) / COUNT(*) AS cancellation_rate
-FROM hotels
-GROUP BY hotel
-ORDER BY cancellation_rate DESC;
-```
-[](link)
+![Solution 4- Hotel](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/4.2.png)
 ```
 WITH hotels AS (
 SELECT * FROM hotel_2018
