@@ -22,6 +22,7 @@ The project addresses the following key business questions:
 ![Solution 3](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/3.png)
 
 **4. What is the cancellation rate, and does it vary based on various factors?customer type, or booking lead time?**
+
 a. Year:
 
 ![Solution 4- Year](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/4.1.png)
@@ -39,6 +40,7 @@ d. Lead Time:
 ![Solution 4- Lead Time](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/4.4.png)
 
 **5. What is the average daily rate (ADR) for each hotel, and how does it change over the months of the year?**
+
 a. City Hotel:
 
 ![Solution 5- City Hotel](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/5.1.png)
