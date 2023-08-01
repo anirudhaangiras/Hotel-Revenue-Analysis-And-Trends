@@ -9,199 +9,56 @@ The dataset used in this analysis is sourced from [Kaggle](https://www.kaggle.co
 ## SQL Analysis
 The project addresses the following key business questions:
 
-1. What is the overall hotel revenue for the given period?
+**1. What is the overall hotel revenue for the given period?**
 
 ![Solution 1](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/1.png)
 
-2. How does the overall revenue vary between the two hotels?
+**2. How does the overall revenue vary between the two hotels?**
  
 ![Solution 2](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/2.png)
 
-3. How does the overall revenue vary for the given period between the two hotels?
+**3. How does the overall revenue vary for the given period between the two hotels?**
 
 ![Solution 3](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/3.png)
 
-4. What is the cancellation rate, and does it vary based on factors like hotel type, customer type, or booking lead time?
+**4. What is the cancellation rate, and does it vary based on various factors?customer type, or booking lead time?**
+a. Year:
 
-![Solution 4- Year](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/4.1.png))
+![Solution 4- Year](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/4.1.png)
+
+b. Hotel Type:
 
 ![Solution 4- Hotel](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/4.2.png)
-```
-WITH hotels AS (
-SELECT * FROM hotel_2018
-UNION ALL
-SELECT * FROM hotel_2019
-UNION ALL
-SELECT * FROM hotel_2020
-)
 
-SELECT market_segment,
-SUM(CASE 
-	WHEN is_canceled = 1 THEN 1 
-	ELSE 0 
-	END) AS canceled_bookings,
-COUNT(*) AS total_bookings,
-CAST(SUM(CASE WHEN is_canceled = 1 THEN 1 ELSE 0 END) AS FLOAT) / COUNT(*) AS cancellation_rate
-FROM hotels
-GROUP BY market_segment
-ORDER BY cancellation_rate DESC;
-```
-[](link)
-```
-WITH hotels AS (
-SELECT * FROM hotel_2018
-UNION ALL
-SELECT * FROM hotel_2019
-UNION ALL
-SELECT * FROM hotel_2020
-)
+c. Customer Type:
 
-SELECT 
-CASE 
-	WHEN lead_time <= 7 THEN '0-7 Days'
-	WHEN lead_time > 7 AND lead_time <= 14 THEN '8-14 Days'
-	WHEN lead_time > 14 AND lead_time <= 30 THEN '15-30 Days'
-	ELSE 'More then 30 Days'
-END AS lead_time_range,
-SUM(CASE 
-	WHEN is_canceled = 1 THEN 1 
-	ELSE 0 
-	END) AS canceled_bookings,
-COUNT(*) AS total_bookings,
-CAST(SUM(CASE WHEN is_canceled = 1 THEN 1 ELSE 0 END) AS FLOAT) / COUNT(*) AS cancellation_rate
-FROM hotels
-GROUP BY 
-CASE 
-	WHEN lead_time <= 7 THEN '0-7 Days'
-	WHEN lead_time > 7 AND lead_time <= 14 THEN '8-14 Days'
-	WHEN lead_time > 14 AND lead_time <= 30 THEN '15-30 Days'
-	ELSE 'More then 30 Days'
-	END
-ORDER BY cancellation_rate DESC;
-```
-[](link)
+![Solution 4- Customer Type]([link](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/4.3.png)
 
-5. What is the average daily rate (ADR) for each hotel, and how does it change over the months of the year?
-```
-WITH hotels AS (
-SELECT * FROM hotel_2018
-UNION ALL
-SELECT * FROM hotel_2019
-UNION ALL
-SELECT * FROM hotel_2020
-)
+d. Lead Time:
 
-SELECT arrival_date_month AS month_city_hotel, AVG(adr) AS Average_Daily_Rate
-FROM hotels
-WHERE hotel = 'City Hotel'
-GROUP BY arrival_date_month
-ORDER BY Average_Daily_Rate DESC;
-```
-[](link)
-```
-WITH hotels AS (
-SELECT * FROM hotel_2018
-UNION ALL
-SELECT * FROM hotel_2019
-UNION ALL
-SELECT * FROM hotel_2020
-)
+![Solution 4- Lead Time](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/4.4.png)
 
-SELECT arrival_date_month AS month_resort, AVG(adr) AS Average_Daily_Rate
-FROM hotels
-WHERE hotel = 'Resort Hotel'
-GROUP BY arrival_date_month
-ORDER BY Average_Daily_Rate DESC;
-```
-[](link)
+**5. What is the average daily rate (ADR) for each hotel, and how does it change over the months of the year?**
+a. City Hotel:
 
-6. Which market segments and distribution channels contribute the most to the hotel's revenue?
-```
-WITH hotels AS (
-SELECT * FROM hotel_2018
-UNION ALL
-SELECT * FROM hotel_2019
-UNION ALL
-SELECT * FROM hotel_2020
-)
+![Solution 5- City Hotel](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/5.1.png)
 
-SELECT h.market_segment, h.distribution_channel,
-round(sum((stays_in_week_nights + stays_in_weekend_nights)*adr*discount),2) AS total_revenue
-FROM hotels h
-left join market_segment ms
-on h.market_segment = ms.market_segment
-left join meal_cost mc
-on h.meal = mc.meal
-GROUP BY h.market_segment, h.distribution_channel
-ORDER BY total_revenue DESC;
-```
-[](link)
+b. Resort Hotel:
 
-7. Is there any correlation between the number of booking changes and the cancellation rate?
-```
-WITH hotels AS (
-SELECT * FROM hotel_2018
-UNION ALL
-SELECT * FROM hotel_2019
-UNION ALL
-SELECT * FROM hotel_2020
-)
+![Solution 5- Resort Hotel](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/5.2.png)
 
-SELECT 
-CASE
-	WHEN booking_changes >= 0 AND booking_changes <= 3 THEN '0-3 Changes'
-	WHEN booking_changes >3 AND booking_changes <= 7 THEN '4-7 Changes'
-	ELSE '7+ Changes'
-END AS Booking_Changes_Range, 
-COUNT(CASE
-		WHEN booking_changes >= 0 AND booking_changes <= 3 THEN '0-3 Changes'
-		WHEN booking_changes >3 AND booking_changes <= 7 THEN '4-7 Changes'
-		ELSE '7+ Changes'
-	  END) AS no_of_booking_changes,
-CAST(SUM(CASE WHEN is_canceled = 1 THEN 1 ELSE 0 END) AS FLOAT) / COUNT(*) AS cancellation_rate
-FROM hotels
-GROUP BY 
-CASE
-	WHEN booking_changes >= 0 AND booking_changes <= 3 THEN '0-3 Changes'
-	WHEN booking_changes >3 AND booking_changes <= 7 THEN '4-7 Changes'
-	ELSE '7+ Changes'
-END
-ORDER BY cancellation_rate DESC;
-```
+**6. Which market segments and distribution channels contribute the most to the hotel's revenue?**
 
-8. How does the total number of special requests affect the ADR and lead time?
-```
-WITH hotels AS (
-SELECT * FROM hotel_2018
-UNION ALL
-SELECT * FROM hotel_2019
-UNION ALL
-SELECT * FROM hotel_2020
-)
+![Solution 6](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/6.png)
 
-SELECT total_of_special_requests, AVG(adr) AS average_daily_rate, AVG(lead_time) AS average_lead_time
-FROM hotels
-WHERE total_of_special_requests <> 0
-GROUP BY total_of_special_requests
-ORDER BY total_of_special_requests ;
-```
-[](link)
+**7. Is there any correlation between the number of booking changes and the cancellation rate?**
 
-9. How does the meal cost vary with the customer type?
-```
-WITH hotels AS (
-SELECT * FROM hotel_2018
-UNION ALL
-SELECT * FROM hotel_2019
-UNION ALL
-SELECT * FROM hotel_2020
-)
+![Solution 7](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/7.png)
 
-SELECT h.customer_type, AVG(mc.Cost) AS average_meal_cost
-FROM hotels AS h
-LEFT JOIN meal_cost mc
-on h.meal = mc.meal
-GROUP BY h.customer_type
-ORDER BY average_meal_cost DESC;
-```
-[](link)
+**8. How does the total number of special requests affect the ADR and lead time?**
+
+![Solution 8](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/8.png)
+
+**9. How does the meal cost vary with the customer type?**
+
+![Solution 9](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/9.png)
