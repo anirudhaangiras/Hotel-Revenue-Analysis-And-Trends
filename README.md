@@ -10,13 +10,13 @@ The dataset used in this analysis is sourced from [Kaggle](https://www.kaggle.co
 The project addresses the following key business questions:
 
 1. What is the overall hotel revenue for the given period?
-[Solution 1](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/1.png)
+![Solution 1](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/1.png)
 
 2. How does the overall revenue vary between the two hotels?
-[Solution 2](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/2.png)
+![Solution 2](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/2.png)
 
 3. How does the overall revenue vary for the given period between the two hotels?
-[Solution 3](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/3.png)
+![Solution 3](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/3.png)
 
 4. What is the cancellation rate, and does it vary based on factors like hotel type, customer type, or booking lead time?
 ```
