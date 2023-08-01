@@ -9,66 +9,14 @@ The dataset used in this analysis is sourced from [Kaggle](https://www.kaggle.co
 ## SQL Analysis
 The project addresses the following key business questions:
 
-8. How does the meal cost vary with the customer type?
-
-### Business Problem 1
 1. What is the overall hotel revenue for the given period?
-```
-WITH hotels AS (
-SELECT * FROM hotel_2018
-UNION ALL
-SELECT * FROM hotel_2019
-UNION ALL
-SELECT * FROM hotel_2020
-)
-
-SELECT arrival_date_year AS year,
-round(sum((stays_in_week_nights + stays_in_weekend_nights)*adr*discount),2) AS total_revenue
-FROM hotels h
-left join market_segment ms
-on h.market_segment = ms.market_segment
-GROUP BY arrival_date_year;
-```
-[](link)
+[Solution 1](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/1.png)
 
 2. How does the overall revenue vary between the two hotels?
-```
-WITH hotels AS (
-SELECT * FROM hotel_2018
-UNION ALL
-SELECT * FROM hotel_2019
-UNION ALL
-SELECT * FROM hotel_2020
-)
-
-SELECT hotel,
-round(sum((stays_in_week_nights + stays_in_weekend_nights)*adr*discount),2) AS total_revenue
-FROM hotels h
-left join market_segment ms
-on h.market_segment = ms.market_segment
-GROUP BY hotel;
-```
-[](link)
+[Solution 2](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/2.png)
 
 3. How does the overall revenue vary for the given period between the two hotels?
-```
-WITH hotels AS (
-SELECT * FROM hotel_2018
-UNION ALL
-SELECT * FROM hotel_2019
-UNION ALL
-SELECT * FROM hotel_2020
-)
-
-SELECT arrival_date_year AS year, hotel,
-round(sum((stays_in_week_nights + stays_in_weekend_nights)*adr*discount),2) AS total_revenue
-FROM hotels h
-LEFT JOIN market_segment ms
-on h.market_segment = ms.market_segment
-GROUP BY arrival_date_year, hotel
-ORDER BY arrival_date_year;
-```
-[](link)
+[Solution 3](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/3.png)
 
 4. What is the cancellation rate, and does it vary based on factors like hotel type, customer type, or booking lead time?
 ```
