@@ -32,7 +32,7 @@ b. Hotel Type:
 
 c. Customer Type:
 
-![Solution 4- Customer Type]([link](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/4.3.png)
+![Solution 4- Customer Type](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/4.3.png)
 
 d. Lead Time:
 
