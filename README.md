@@ -67,7 +67,7 @@ b. Resort Hotel:
 
 ## Power BI Dashboard
 
-The [Power BI folder](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/tree/main/PowerBI) contains the Power BI file with an interactive dashboard that showcases the visualizations answering the business questions. Screenshots of the dashboard can be found below.
+The [Power BI folder](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/tree/main/PowerBI) contains the Power BI file with an interactive dashboard that showcases the visualizations answering the business questions.
 
 ![Dashboard](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/PowerBI/Hotel_Revenue_Dashboard.png)
 
