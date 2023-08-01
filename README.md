@@ -11,66 +11,63 @@ The project addresses the following key business questions:
 
 **1. What is the overall hotel revenue for the given period?**
 
-![Solution 1](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/1.png)
+![Solution 1](link)
 
 **2. How does the overall revenue vary between the two hotels?**
  
-![Solution 2](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/2.png)
+![Solution 2](link)
 
 **3. How does the overall revenue vary for the given period between the two hotels?**
 
-![Solution 3](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/3.png)
+![Solution 3](link)
 
-**4. What is the cancellation rate, and does it vary based on various factors?customer type, or booking lead time?**
+**4. What is the cancellation rate, and does it vary based on various factors?**
 
 a. Year:
 
-![Solution 4- Year](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/4.1.png)
+![Solution 4- Year](link)
 
 b. Hotel Type:
 
-![Solution 4- Hotel](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/4.2.png)
+![Solution 4- Hotel](link)
 
 c. Customer Type:
 
-![Solution 4- Customer Type](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/4.3.png)
+![Solution 4- Customer Type](link)
 
 d. Lead Time:
 
-![Solution 4- Lead Time](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/4.4.png)
+![Solution 4- Lead Time](link)
 
 **5. What is the average daily rate (ADR) for each hotel, and how does it change over the months of the year?**
 
 a. City Hotel:
 
-![Solution 5- City Hotel](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/5.1.png)
+![Solution 5- City Hotel](link)
 
 b. Resort Hotel:
 
-![Solution 5- Resort Hotel](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/5.2.png)
+![Solution 5- Resort Hotel](link)
 
 **6. Which market segments and distribution channels contribute the most to the hotel's revenue?**
 
-![Solution 6](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/6.png)
+![Solution 6](link)
 
 **7. Is there any correlation between the number of booking changes and the cancellation rate?**
 
-![Solution 7](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/7.png)
+![Solution 7](link)
 
 **8. How does the total number of special requests affect the ADR and lead time?**
 
-![Solution 8](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/8.png)
+![Solution 8](link)
 
 **9. How does the meal cost vary with the customer type?**
 
-![Solution 9](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/9.png)
+![Solution 9](link)
 
 ## Power BI Dashboard
 
 The [Power BI folder](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/tree/main/PowerBI) contains the Power BI file with an interactive dashboard that showcases the visualizations answering the business questions. Screenshots of the dashboard can be found below.
 
-![](link)
+![Dashboard](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/PowerBI/Hotel_Revenue_Dashboard.png)
 
-![](link)
-
-![](link)
