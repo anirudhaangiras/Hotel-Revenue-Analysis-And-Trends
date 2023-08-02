@@ -25,7 +25,7 @@ c. Customer Type:
 
 d. Lead Time:
 
-![Solution 1- Lead Time](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/1.4.png)
+![Solution 1- Lead Time](link)
 
 **2. What is the average daily rate (ADR) for each hotel, and how does it change over the months of the year?**
 
