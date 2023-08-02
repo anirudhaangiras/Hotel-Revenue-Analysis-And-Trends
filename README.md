@@ -13,41 +13,41 @@ The project addresses the following key business questions:
 
 a. Year:
 
-![Solution 1- Year](link)
+![Solution 1- Year](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/1.1.png)
 
 b. Hotel Type:
 
-![Solution 1- Hotel](link)
+![Solution 1- Hotel](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/1.2.png)
 
 c. Customer Type:
 
-![Solution 1- Customer Type](link)
+![Solution 1- Customer Type](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/1.3.png)
 
 d. Lead Time:
 
-![Solution 1- Lead Time](link)
+![Solution 1- Lead Time](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/1.4.png)
 
 **2. What is the average daily rate (ADR) for each hotel, and how does it change over the months of the year?**
 
 a. City Hotel:
 
-![Solution 2- City Hotel](link)
+![Solution 2- City Hotel](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/2.1.png)
 
 b. Resort Hotel:
 
-![Solution 2- Resort Hotel](link)
+![Solution 2- Resort Hotel](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/2.1.png)
 
 **3. Is there any correlation between the number of booking changes and the cancellation rate?**
 
-![Solution 3](link)
+![Solution 3](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/3.png)
 
 **4. How does the total number of special requests affect the ADR and lead time?**
 
-![Solution 4](link)
+![Solution 4](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/4.png)
 
 **5. How does the meal cost vary with the customer type?**
 
-![Solution 5](link)
+![Solution 5](https://github.com/anirudhaangiras/Hotel-Revenue-Analysis-And-Trends/blob/main/SQL/5.png)
 
 ## Power BI Dashboard
 
