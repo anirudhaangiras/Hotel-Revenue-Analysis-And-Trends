@@ -9,61 +9,45 @@ The dataset used in this analysis is sourced from [Kaggle](https://www.kaggle.co
 ## SQL Analysis
 The project addresses the following key business questions:
 
-**1. What is the overall hotel revenue for the given period?**
-
-![Solution 1](link)
-
-**2. How does the overall revenue vary between the two hotels?**
- 
-![Solution 2](link)
-
-**3. How does the overall revenue vary for the given period between the two hotels?**
-
-![Solution 3](link)
-
-**4. What is the cancellation rate, and does it vary based on various factors?**
+**1. What is the cancellation rate, and does it vary based on various factors?**
 
 a. Year:
 
-![Solution 4- Year](link)
+![Solution 1- Year](link)
 
 b. Hotel Type:
 
-![Solution 4- Hotel](link)
+![Solution 1- Hotel](link)
 
 c. Customer Type:
 
-![Solution 4- Customer Type](link)
+![Solution 1- Customer Type](link)
 
 d. Lead Time:
 
-![Solution 4- Lead Time](link)
+![Solution 1- Lead Time](link)
 
-**5. What is the average daily rate (ADR) for each hotel, and how does it change over the months of the year?**
+**2. What is the average daily rate (ADR) for each hotel, and how does it change over the months of the year?**
 
 a. City Hotel:
 
-![Solution 5- City Hotel](link)
+![Solution 2- City Hotel](link)
 
 b. Resort Hotel:
 
-![Solution 5- Resort Hotel](link)
+![Solution 2- Resort Hotel](link)
 
-**6. Which market segments and distribution channels contribute the most to the hotel's revenue?**
+**3. Is there any correlation between the number of booking changes and the cancellation rate?**
 
-![Solution 6](link)
+![Solution 3](link)
 
-**7. Is there any correlation between the number of booking changes and the cancellation rate?**
+**4. How does the total number of special requests affect the ADR and lead time?**
 
-![Solution 7](link)
+![Solution 4](link)
 
-**8. How does the total number of special requests affect the ADR and lead time?**
+**5. How does the meal cost vary with the customer type?**
 
-![Solution 8](link)
-
-**9. How does the meal cost vary with the customer type?**
-
-![Solution 9](link)
+![Solution 5](link)
 
 ## Power BI Dashboard
 
